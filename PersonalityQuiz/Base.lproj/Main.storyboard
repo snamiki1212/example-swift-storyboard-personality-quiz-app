@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-bH-mfv" userLabel="SIngleQA">
-                                <rect key="frame" x="20" y="310" width="374" height="180"/>
+                                <rect key="frame" x="20" y="331" width="374" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-j4-cnL">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -244,6 +244,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BvB-bH-mfv" firstAttribute="leading" secondItem="8dB-4a-JVl" secondAttribute="leading" constant="20" id="2wY-Vh-bdw"/>
+                            <constraint firstItem="8dB-4a-JVl" firstAttribute="trailing" secondItem="BvB-bH-mfv" secondAttribute="trailing" constant="20" id="5L2-4E-fNy"/>
                             <constraint firstItem="8dB-4a-JVl" firstAttribute="trailing" secondItem="FLe-AZ-83J" secondAttribute="trailing" constant="20" id="9Lg-YM-jzj"/>
                             <constraint firstItem="FLe-AZ-83J" firstAttribute="leading" secondItem="8dB-4a-JVl" secondAttribute="leading" constant="20" id="BQ8-Ib-xju"/>
                             <constraint firstItem="YvB-6z-vJW" firstAttribute="leading" secondItem="8dB-4a-JVl" secondAttribute="leading" constant="20" id="BXe-4t-9Im"/>
@@ -254,18 +255,35 @@
                             <constraint firstItem="8dB-4a-JVl" firstAttribute="trailing" secondItem="v4y-Z1-rCS" secondAttribute="trailing" constant="20" id="W6D-rY-k7R"/>
                             <constraint firstItem="v4y-Z1-rCS" firstAttribute="centerY" secondItem="ZFt-pQ-Lu0" secondAttribute="centerY" id="X8w-q0-A2c"/>
                             <constraint firstItem="8dB-4a-JVl" firstAttribute="bottom" secondItem="PTo-Wt-94x" secondAttribute="bottom" constant="20" id="beh-7q-syn"/>
+                            <constraint firstItem="BvB-bH-mfv" firstAttribute="leading" secondItem="8dB-4a-JVl" secondAttribute="leading" constant="20" id="cOp-n4-SCy"/>
                             <constraint firstItem="YvB-6z-vJW" firstAttribute="top" secondItem="8dB-4a-JVl" secondAttribute="top" constant="20" id="g1i-e9-fc0"/>
+                            <constraint firstItem="BvB-bH-mfv" firstAttribute="centerY" secondItem="ZFt-pQ-Lu0" secondAttribute="centerY" id="ki7-Gn-r9y"/>
                             <constraint firstItem="FLe-AZ-83J" firstAttribute="centerY" secondItem="ZFt-pQ-Lu0" secondAttribute="centerY" id="zk3-8d-cuF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="BvB-bH-mfv"/>
                                 <exclude reference="FLe-AZ-83J"/>
+                                <exclude reference="v4y-Z1-rCS"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bce-Yn-1jd"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="IHf-tq-B7d" id="udK-uB-ddx"/>
+                        <outlet property="multiLabel2" destination="RHA-WI-7GK" id="LV7-aD-0Y2"/>
+                        <outlet property="multiLabel3" destination="Cjh-cR-HOj" id="58Y-1O-eQB"/>
+                        <outlet property="multiLabel4" destination="IJp-hl-M9Q" id="DXm-gS-rDU"/>
+                        <outlet property="multipleStackView" destination="FLe-AZ-83J" id="YLd-Lt-Krd"/>
+                        <outlet property="questionLabel" destination="YvB-6z-vJW" id="X0v-4o-w7h"/>
+                        <outlet property="questionProgressView" destination="PTo-Wt-94x" id="m6T-L5-Lbc"/>
+                        <outlet property="rangedLabel1" destination="Uqb-z7-r2n" id="1eA-JR-0Gw"/>
+                        <outlet property="rangedLabel2" destination="aR5-99-Du7" id="oN7-8q-uWr"/>
+                        <outlet property="rangedStackView" destination="v4y-Z1-rCS" id="CRb-bB-hfV"/>
+                        <outlet property="singleButton1" destination="F4G-j4-cnL" id="xkz-Bh-doz"/>
+                        <outlet property="singleButton2" destination="TRL-ck-ZvA" id="901-kj-HYs"/>
+                        <outlet property="singleButton3" destination="aQE-ld-Iz2" id="xnD-5p-xZb"/>
+                        <outlet property="singleButton4" destination="tWr-ZY-JS0" id="U0r-ex-rVi"/>
+                        <outlet property="singleStackView" destination="BvB-bH-mfv" id="z9Y-4E-Pcc"/>
                         <segue destination="v8r-xI-Qyx" kind="show" identifier="d" id="lIr-4A-gVO"/>
                     </connections>
                 </viewController>
