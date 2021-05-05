@@ -11,8 +11,8 @@ class ResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        calculatePeronalityResult()
+        navigationItem.hidesBackButton = true
     }
 
     var responses: [Answer]
@@ -25,7 +25,21 @@ class ResultsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func calculatePeronalityResult(){
+        let frequencyOfAnswers = responses.reduce(into: [:]) {
+            (counts, answer) in counts[answer.type, default: 0] += 1
+        }
+        let frequencyAnswesSorted = frequencyOfAnswers.sorted(by: {
+            (pair1, pair2) in return pair1.value > pair2.value
+        })
+        let mostCommonAsnwer = frequencyAnswesSorted.first!.key
+        resultAnswerLabel.text = "You are a \(mostCommonAsnwer.rawValue)!"
+        resultDefinitionLabel.text = mostCommonAsnwer.definition
+    }
+    
 
+    @IBOutlet var resultAnswerLabel: UILabel!
+    @IBOutlet var resultDefinitionLabel: UILabel!
     /*
     // MARK: - Navigation
 

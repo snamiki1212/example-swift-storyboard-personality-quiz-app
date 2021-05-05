@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -129,8 +129,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-AZ-83J" userLabel="MultiQA">
-                                <rect key="frame" x="20" y="249" width="374" height="344"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-AZ-83J" userLabel="MultiQA">
+                                <rect key="frame" x="20" y="311.5" width="374" height="219"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lwq-cO-MLd">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="184"/>
@@ -204,7 +204,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-aw-FIC">
-                                        <rect key="frame" x="0.0" y="314" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="189" width="374" height="30"/>
                                         <state key="normal" title="Submit Answer"/>
                                         <connections>
                                             <action selector="multipleAnswerButtonPressed:" destination="KO1-aN-d9h" eventType="touchUpInside" id="eNK-zr-92J"/>
@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMW-OI-Xqu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="153"/>
+            <point key="canvasLocation" x="769.56521739130437" y="152.67857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="amw-Ft-MtQ">
@@ -367,10 +367,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="aav-LQ-T8H">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eus-HE-wch"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eus-HE-wch">
+                            <connections>
+                                <segue destination="A5u-Sn-ebD" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="Kox-Q6-4fh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="dff-59-sEG" id="ouc-0T-zTJ"/>
+                        <outlet property="resultDefinitionLabel" destination="gDt-Ak-rD0" id="ZkD-QH-pnc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeN-3M-HDr" sceneMemberID="firstResponder"/>
+                <exit id="A5u-Sn-ebD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1601" y="153"/>
         </scene>

@@ -46,6 +46,8 @@ class QuestionViewController: UIViewController {
         return ResultsViewController(coder: coder, responses: answersChosen)
     }
     
+    
+    
     func updateSingleStack(using answers: [Answer]){
         singleStackView.isHidden = false
         singleButton1.setTitle(answers[0].text, for: .normal)
